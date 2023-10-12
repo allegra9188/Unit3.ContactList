@@ -36,11 +36,11 @@ export default function ContactList({setSelectedContactId}) {
 
     return (
         <table>
-        <thead>
-          <tr>
-            <th colSpan="3">Contact List</th>
-          </tr>
-        </thead>
+          <thead>
+            <tr>
+              <th colSpan="3">Contact List</th>
+            </tr>
+          </thead>
         <tbody>
           <tr>
             <td>Name</td>

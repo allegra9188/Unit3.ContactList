@@ -1,4 +1,4 @@
-import SelectedContact from "./SelectedContact"
+
 
 export default function ContactRow( {setSelectedContactId,contact} ) {
     return (

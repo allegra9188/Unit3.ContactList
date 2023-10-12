@@ -2,6 +2,7 @@ import { useEffect,useState } from "react";
 
 export default function SelectedContact({selectedContactId, setSelectedContactId}){
     const [contact, setContact]=useState(null)
+
     useEffect(()=>{
         async function fetchSingleUser(){
             try {
@@ -9,7 +10,7 @@ export default function SelectedContact({selectedContactId, setSelectedContactId
                 const result=await response.json();
                 console.log(result)
                 setContact(result)
-                console.log(contact)
+                //console.log(contact)
                 
             } catch (error) {
                 console.error(error)
@@ -20,15 +21,19 @@ export default function SelectedContact({selectedContactId, setSelectedContactId
     // render here
     return (
         <div>
-            <button onClick={()=>{setSelectedContactId(null)}}>
+            <button className="but"onClick={()=>{setSelectedContactId(null)}}>
                 Back to List
             </button>
+            
             <table>
-                <tr>
-                <td>{contact?.name}</td>
-                <td>{contact?.email}</td>
-                <td>{contact?.phone}</td>
-                </tr>
+                <tbody>
+                    <tr>
+                        <td>{contact?.name}</td>
+                        <td>{contact?.email}</td>
+                        <td>{contact?.phone}</td>
+                    </tr>
+                </tbody>
+                
             </table>
         </div>
         

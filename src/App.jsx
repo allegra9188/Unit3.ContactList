@@ -14,14 +14,13 @@ function App() {
   // {setSelectedContactId}
   
 
-  console.log("Contacts: ", contacts);
+  //console.log("Contacts: ", contacts);
 
   return (
     <>
       {selectedContactId?
         // (<SelectedContact setSelectedContactId={selectedContactId}/>):(< ContactList setSelectedContactId={setSelectedContactId} />)
         (<SelectedContact setSelectedContactId={setSelectedContactId} selectedContactId={selectedContactId}/>):(< ContactList setSelectedContactId={setSelectedContactId} />)
-        
       } 
       
     </>
